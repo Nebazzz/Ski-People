@@ -197,16 +197,20 @@
             <fieldset class="cart__form-fieldset">
               <legend class="cart__form-legend">Доставка</legend>
               <label class="cart__form-label">
-                <input class="cart__form-radio" type="radio" name="delivery">Доставка
-                <input class="cart__form-radio" type="radio" name="pickup">Самовывоз
+                <input class="cart__form-radio" type="radio" value="delivery" name="delivery">Доставка
+              </label>
+              <label class="cart__form-label">
+                <input class="cart__form-radio" type="radio" value="pickup" name="delivery">Самовывоз
               </label>
             </fieldset>
 
             <fieldset class="cart__form-fieldset">
               <legend class="cart__form-legend">Оплата</legend>
               <label class="cart__form-label">
-                <input class="cart__form-radio" type="radio" name="card">Картой при получении
-                <input class="cart__form-radio" type="radio" name="cash">Наличными при получении
+                <input class="cart__form-radio" type="radio" value="card" name="payment">Картой при получении
+              </label>
+              <label class="cart__form-label">
+                <input class="cart__form-radio" type="radio" value="cash" name="payment">Наличными при получении
               </label>
             </fieldset>
           </form>
