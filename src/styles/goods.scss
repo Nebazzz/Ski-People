@@ -93,10 +93,6 @@
       transform: translateY(1px);
     }
 
-    &-inactive {
-      opacity: 0.2;
-    }
-
     @media (min-width: 1024px) {
       margin-bottom: 40px;
     }
@@ -107,4 +103,16 @@
   content: '';
   top: 12px;
   right: 12px;
+}
+
+.card__button-inactive {
+  border: 1px solid #0044F0;
+  border-radius: 32px;
+  margin-bottom: 32px;
+  padding: 12px 24px;
+  color: #0044F0;
+  background-color: transparent;
+  opacity: 0.2;
+  pointer-events: none;
+  cursor: default;
 }
