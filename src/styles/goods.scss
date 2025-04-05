@@ -1,16 +1,52 @@
 .goods {
+  padding: 40px 0;
+
+  @media (min-width: 1024px) {
+    padding: 60px 0;
+  }
 
   &__title {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
+    display: grid;
+    gap: 32px 8px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+    @media (min-width: 468px) {
+      gap: 32px 10px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    @media (min-width: 768px) {
+      gap: 32px 10px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    @media (min-width: 1004px) {
+      gap: 40px 16px;
+      grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+      gap: 40px 16px;
+      grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+    }
   }
 
-  &__item {
-  }
-
-  &__card {
-  }
 }
 .card {
   position: relative;
@@ -86,7 +122,7 @@
     }
 
     &:focus {
-      outline: 1px solid #042F9C;  // Чёткая видимая обводка
+      outline: 1px solid #042F9C;
     }
 
     &:active {
