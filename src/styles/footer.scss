@@ -56,7 +56,37 @@
   }
 
   &__social-link {
+    
   }
+
+  &__social-link-image {
+      fill: white;
+      stroke: #1c1c1c;
+      transition: all 0.3s ease;
+
+      &:hover {
+        path {
+          fill: #0044F0;
+          stroke: #0044F0;
+        }
+      }
+
+      &:active {
+        path {
+          transform: translateY(1px);
+          fill: #0044F0;
+        }
+      }
+
+        
+      &:focus {
+        outline: none;
+        path {
+          stroke: #0044f0;
+          fill: #0044f0;
+        }
+      }
+    }
 
   &__developer-list {
     display: flex;
