@@ -1,10 +1,16 @@
+import { layout  } from "./layout";
 
-export const catalog = () => {
-  const el = document.createElement('div');
-  el.classList.add('catalog');
+let rendered = false;
 
-  const child = `
-    <div class="container">
+  if (rendered) {
+    return '';
+  };
+
+  export const catalog = () => {
+    const el = document.createElement('div');
+    el.classList.add('catalog');
+
+    const child = `
       <ul class="catalog__list">
         <li class="catalog__item">
           <a href="#" class="catalog__link catalog__link-active">Все</a>
@@ -22,9 +28,11 @@ export const catalog = () => {
           <a href="#" class="catalog__link">Ботинки</a>
         </li>
       </ul>
-    </div>
-  `;
+    `;
+  
+    el.append(layout(child, 'catalog__container'));
 
-  el.innerHTML = child;
-  return el;
-}
+    rendered = true;
+
+    return el;
+  }
