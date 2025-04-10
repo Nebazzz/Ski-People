@@ -1,5 +1,7 @@
 import { layout } from "./layout";
 
+let rendered = false;
+
 export const footer = () => {
 
   const el = document.createElement('footer');
@@ -73,6 +75,10 @@ export const footer = () => {
   `;
 
   el.append(layout(child, 'footer__container'));
+
+  document.body.append(el);
+
+  rendered = true;
 
   return el;
 }

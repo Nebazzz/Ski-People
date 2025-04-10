@@ -1,8 +1,18 @@
-import { mainSection } from "./main-layout";
 
-export const product = () => {
+import { layout } from "./layout";
 
-  const content = `
+let rendered = false;
+
+export const product = (parent) => {
+
+  if (rendered) {
+    return document.querySelector('.product');
+  }
+
+  const el = document.createElement('div');
+  el.classList.add('product');
+
+  const child = `
         <h2 class="product__title">Горные лыжи</h2>
         <div class="product__description">
 
@@ -131,5 +141,9 @@ export const product = () => {
         </div>
   `;
 
-  return mainSection(content, 'product', 'product__container');
+  el.append(layout(child, 'product__container'));
+  parent.append(el);
+
+  rendered = true;
+  return el;
 };

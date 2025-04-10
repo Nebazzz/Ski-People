@@ -1,15 +1,6 @@
 .catalog {
 
   overflow-x: hidden;
-  padding-bottom: 20px;
-
-  @media (min-width: 768px) {
-    padding-bottom: 32px;
-  }
-
-  @media (min-width: 1024px) {
-    padding-bottom: 40px;
-  }
 
   &__list {
     display: flex;
@@ -30,7 +21,7 @@
 
     &:focus {
       border: 1px solid #0044f0;
-      color: #0044f0;
+      color: #fff;
       outline: none;
     }
 

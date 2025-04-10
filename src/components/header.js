@@ -1,5 +1,7 @@
 import { layout } from "./layout";
 
+let rendered = false;
+
 export const header = () => {
 
   const el = document.createElement('header');
@@ -46,5 +48,10 @@ export const header = () => {
   `;
 
   el.append(layout(child, 'header__container'));
+
+  document.body.append(el);
+
+  rendered = true;
+
   return el;
 }
