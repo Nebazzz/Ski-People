@@ -19,7 +19,14 @@ export const initRouter = () => {
         footer(),
         console.log('main');
     })
-    .on('/favorite', () => {
+    .on('/product', () => {
+      console.log('product');
+    })
+    .on('/favorite', async() => {
+      const goods = await getData();
+      header();
+      productList('Избранное', goods, main());
+      footer();
       console.log('favorite');
     })
     .notFound(() => {

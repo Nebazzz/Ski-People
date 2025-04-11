@@ -1,6 +1,6 @@
 let rendered = false;
 
-export const main = (child) => {
+export const main = () => {
 
   if (rendered) {
     return document.querySelector('main');
